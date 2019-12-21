@@ -1,7 +1,7 @@
 {
   "name": "language-coccinelle",
   "version": "0.0.0",
-  "description": "A short description of your language package",
+  "description": "Coccinelle language support for Atom",
   "keywords": [
     "language",
     "grammar"
