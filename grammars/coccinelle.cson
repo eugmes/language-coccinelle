@@ -14,11 +14,62 @@ folds: [
   {
     type: 'comment'
   }
+  {
+    type: 'changeset'
+  }
 ]
 
 scopes:
+
   'comment': 'comment.block'
-  'string': 'string'
-  'pathToIsoFile': 'string'
-  'include': 'keyword.control'
+
+  """
+  include > "#include",
+  using_file > "using",
+  using_iso > "using",
+  virtual > "virtual"
+  """: 'keyword.control.directive'
+
+  'virtual > id': 'constant.other'
+
+  'metavariables > "@", metavariables > "@@"': 'keyword.control.other'
+
+  """
+  "extends",
+  "depends",
+  "on",
+  "ever",
+  "never",
+  "file",
+  "in",
+  "using",
+  "disable",
+  "exists",
+  "forall",
+  "expression",
+  "identifier",
+  "type",
+  "list",
+  "binary",
+  "operator"
+  """: 'keyword.control'
+
+  '";"': 'punctuation.terminator.statement'
+  '"["': 'punctuation.definition.begin.bracket.square'
+  '"]"': 'punctuation.definition.end.bracket.square'
+  '","': 'punctuation.separator.delimiter'
+  '"{"': 'punctuation.section.block.begin.bracket.curly'
+  '"}"': 'punctuation.section.block.end.bracket.curly'
+  '"("': 'punctuation.section.parens.begin.bracket.round'
+  '")"': 'punctuation.section.parens.end.bracket.round'
+
+  '"&&"': 'keyword.operator'
+  '"||"': 'keyword.operator'
+  '"<<"': 'keyword.operator'
+  '"="': 'keyword.operator'
+
+  'string': 'string.quoted.double'
+  'pathToIsoFile': 'string.quoted.other'
+  'integer': 'constant.numeric.decimal'
+
   'id': 'variable.other'
