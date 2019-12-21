@@ -1,0 +1,17 @@
+{
+  "name": "language-coccinelle",
+  "version": "0.0.0",
+  "description": "A short description of your language package",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/eugmes/language-coccinelle",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-coccinelle": "0.0.2"
+  }
+}

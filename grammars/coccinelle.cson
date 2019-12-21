@@ -1,0 +1,24 @@
+scopeName: 'source.coccinelle'
+name: 'Coccinelle'
+type: 'tree-sitter'
+parser: 'tree-sitter-coccinelle'
+
+fileTypes: [
+  'cocci'
+]
+
+comments:
+  start: '// '
+
+folds: [
+  {
+    type: 'comment'
+  }
+]
+
+scopes:
+  'comment': 'comment.block'
+  'string': 'string'
+  'pathToIsoFile': 'string'
+  'include': 'keyword.control'
+  'id': 'variable.other'
