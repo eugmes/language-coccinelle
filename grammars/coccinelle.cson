@@ -32,7 +32,20 @@ scopes:
 
   'virtual > id': 'constant.other'
 
-  'metavariables > "@", metavariables > "@@"': 'keyword.control.other'
+  """
+  script_metavariables > "script:",
+  script_metavariables > "initialize:",
+  script_metavariables > "finalize:",
+  """: 'keyword.control.directive'
+
+  'language': 'keyword.control'
+
+  """
+  metavariables > "@",
+  metavariables > "@@",
+  script_metavariables > "@",
+  script_metavariables > "@@",
+  """: 'keyword.control.other'
 
   """
   "extends",

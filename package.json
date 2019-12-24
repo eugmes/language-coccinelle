@@ -11,7 +11,8 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "main": "lib/main",
   "dependencies": {
-    "tree-sitter-coccinelle": "0.0.2"
+    "tree-sitter-coccinelle": "0.0.3"
   }
 }
