@@ -17,6 +17,9 @@ folds: [
   {
     type: 'changeset'
   }
+  {
+    type: 'header'
+  }
 ]
 
 scopes:
