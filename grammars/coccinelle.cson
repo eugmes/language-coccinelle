@@ -18,7 +18,7 @@ folds: [
     type: 'changeset'
   }
   {
-    type: 'header'
+    type: 'prolog'
   }
 ]
 
@@ -28,20 +28,19 @@ scopes:
 
   """
   include > "#include",
-  using_file > "using",
-  using_iso > "using",
+  using > "using",
   virtual > "virtual"
   """: 'keyword.control.directive'
 
-  'virtual > id': 'constant.other'
+  'virtual > pure_ident': 'constant.other'
 
   """
-  script_metavariables > "script:",
-  script_metavariables > "initialize:",
-  script_metavariables > "finalize:",
+  script_metavariables > "script",
+  script_metavariables > "initialize",
+  script_metavariables > "finalize",
   """: 'keyword.control.directive'
 
-  'language': 'keyword.control'
+  'language': 'constant.other'
 
   """
   metavariables > "@",
@@ -51,24 +50,79 @@ scopes:
   """: 'keyword.control.other'
 
   """
-  "extends",
-  "depends",
-  "on",
-  "ever",
-  "never",
-  "file",
-  "in",
-  "using",
-  "disable",
-  "exists",
-  "forall",
-  "expression",
-  "identifier",
-  "type",
-  "list",
+  "any",
+  "assignment",
+  "attribute",
   "binary",
-  "operator"
+  "comments",
+  "constant",
+  "declaration",
+  "declarer",
+  "depends",
+  "disable",
+  "error",
+  "ever",
+  "exists",
+  "expression",
+  "extends",
+  "field",
+  "file",
+  "finalize",
+  "forall",
+  "format",
+  "fresh",
+  "function",
+  "global",
+  "identifier",
+  "idexpression",
+  "in",
+  "initialiser",
+  "initialize",
+  "initializer",
+  "iterator",
+  "list",
+  "local",
+  "merge",
+  "metavariable",
+  "name",
+  "never",
+  "on",
+  "operator",
+  "parameter",
+  "position",
+  "script",
+  "statement",
+  "symbol",
+  "type",
+  "typedef",
+  "using",
+  "virtual",
+  "when"
   """: 'keyword.control'
+
+  '"struct"': 'keyword.control'
+  '"enum"': 'keyword.control'
+  '"union"': 'keyword.control'
+
+  '"signed"': 'support.storage.type'
+  '"unsigned"': 'support.storage.type'
+  '"short"': 'support.storage.type'
+  '"long"': 'support.storage.type'
+
+  '"const"': 'storage.modifier'
+  '"volatile"': 'storage.modifier'
+
+  """
+  "char",
+  "int",
+  "float",
+  "double",
+  "size_t",
+  "ssize_t",
+  "ptrdiff_t",
+  "decimal",
+  "typeof"
+  """: 'support.storage.type'
 
   '";"': 'punctuation.terminator.statement'
   '"["': 'punctuation.definition.begin.bracket.square'
@@ -79,13 +133,53 @@ scopes:
   '"("': 'punctuation.section.parens.begin.bracket.round'
   '")"': 'punctuation.section.parens.end.bracket.round'
 
+  '"."': 'keyword.operator.member'
+  '"*"': 'keyword.operator'
+  '"-"': 'keyword.operator'
+  '"+"': 'keyword.operator'
+  '"/"': 'keyword.operator'
+  '"%"': 'keyword.operator'
+  '"++"': 'keyword.operator'
+  '"--"': 'keyword.operator'
+  '"=="': 'keyword.operator'
+  '"!"': 'keyword.operator'
+  '"!="': 'keyword.operator'
+  '"<"': 'keyword.operator'
+  '">"': 'keyword.operator'
+  '">="': 'keyword.operator'
+  '"<="': 'keyword.operator'
   '"&&"': 'keyword.operator'
   '"||"': 'keyword.operator'
+  '"&"': 'keyword.operator'
+  '"|"': 'keyword.operator'
+  '"^"': 'keyword.operator'
+  '"~"': 'keyword.operator'
   '"<<"': 'keyword.operator'
+  '">>"': 'keyword.operator'
   '"="': 'keyword.operator'
+  '"+="': 'keyword.operator'
+  '"-="': 'keyword.operator'
+  '"*="': 'keyword.operator'
+  '"/="': 'keyword.operator'
+  '"%="': 'keyword.operator'
+  '"<<="': 'keyword.operator'
+  '">>="': 'keyword.operator'
+  '"&="': 'keyword.operator'
+  '"^="': 'keyword.operator'
+  '"|="': 'keyword.operator'
+  '"?"': 'keyword.operator'
+  '":"': 'keyword.operator'
+
+  '"=~"': 'keyword.operator'
+  '"!~"': 'keyword.operator'
+  """
+  "<?", ">?", ">?=", "<?="
+  """: 'keyword.operator'
 
   'string': 'string.quoted.double'
-  'pathToIsoFile': 'string.quoted.other'
-  'integer': 'constant.numeric.decimal'
+  'pathIsoFile': 'string.quoted.other'
+  'int': 'constant.numeric.decimal'
 
-  'id': 'variable.other'
+  'rule_name': 'entity.name.function'
+
+  'pure_ident': 'variable.other'

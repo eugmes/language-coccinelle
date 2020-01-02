@@ -13,6 +13,6 @@
   },
   "main": "lib/main",
   "dependencies": {
-    "tree-sitter-coccinelle": "0.0.3"
+    "tree-sitter-coccinelle": "0.0.6"
   }
 }
