@@ -1,5 +1,5 @@
-## 0.1.1 - Better Metavariables Highlighting
+## 0.0.2 - Better Metavariables Highlighting
 * Almost complete highlighting of rule headers is implemented.
 
-## 0.1.0 - First Release
+## 0.0.1 - First Release
 * Initial release with some basic syntax support.
